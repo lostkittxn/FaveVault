@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+    <meta name="apple-mobile-web-app-capable" content="yes" >
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>FaveVault</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/rockwell-nova" rel="stylesheet">
+                
+                
+                
+</head>
+<body>
+    <header>
+        <div class="logo-header">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="search-area">
+            <section id="seleccion-tipo">
+                <div class="botones-tipo">
+                    <button data-tipo="movie" class="boton-tipo">Películas</button>
+                    <button data-tipo="book" class="boton-tipo">Libros</button>
+                    <button data-tipo="album" class="boton-tipo">Álbumes</button>
+                </div>
+            </section>
+            <div id="formulario-busqueda">
+                <input type="text" id="termino-busqueda" placeholder="Ingresa el título...">
+                <button id="buscar">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido-principal">
+        <section id="resultados-busqueda">
+            <h2>Resultados de la búsqueda</h2>
+            <div id="lista-resultados">
+                </div>
+        </section>
+
+        <section id="favoritos">
+            <h2>Favoritos</h2>
+            <div class="filtros-favoritos">
+                <button data-filtro="all" class="activo">Todos</button>
+                <button data-filtro="movie">Películas</button>
+                <button data-filtro="book">Libros</button>
+                <button data-filtro="album">Música</button>
+            </div>
+            <div id="lista-favoritos" class="lista-items favoritos">
+                </div>
+        </section>
+
+        <section id="para-ver-despues">
+            <h2>Watchlist</h2>
+            <div class="filtros-ver-despues">
+                <button data-filtro="all" class="activo">Todos</button>
+                <button data-filtro="movie">Películas</button>
+                <button data-filtro="book">Libros</button>
+                <button data-filtro="album">Música</button>
+            </div>
+            <div id="lista-para-ver" class="lista-items para-ver">
+                </div>
+        </section>
+    </main>
+    <footer>
+        FaveVault es un proyecto en JS usando la API de iTunes ©2010
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
