@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.navigator.standalone) {
-    document.documentElement.style.paddingTop = '20px'; // Ajusta el valor según la altura de la barra de estado
-    document.documentElement.style.backgroundColor = 'black';
-    document.body.style.marginTop = '20px'; // Compensar el padding superior
-    }
     const botonesTipo = document.querySelectorAll('.botones-tipo button');
     const formularioBusqueda = document.getElementById('formulario-busqueda');
     const terminoBusquedaInput = document.getElementById('termino-busqueda');
