@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let favoritos = [];
     let paraVerDespues = [];
 
-    // Estilos para el botón de borrar búsqueda (naranja)
     botonBorrarBusqueda.style.padding = '8px 15px';
     botonBorrarBusqueda.style.cursor = 'pointer';
     botonBorrarBusqueda.style.border = '1px solid #cc6600';
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         botonBorrarBusqueda.style.backgroundImage = 'linear-gradient(to bottom, #ffbb66, #ff8800)';
     });
 
-    // Cargar favoritos y lista "Para ver después" desde localStorage al cargar la página
     if (localStorage.getItem('favoritos')) {
         favoritos = JSON.parse(localStorage.getItem('favoritos'));
         mostrarFavoritos();
@@ -216,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const itemEncontrado = { id: itemId, tipo: tipo, imagen: imagen, titulo: titulo, detalleAdicional: artista, año: año };
 
-            // Contar los favoritos del mismo tipo
             const favoritosDelTipo = favoritos.filter(fav => fav.tipo === tipo);
 
             if (favoritosDelTipo.length < 4 && !favoritoExiste(itemEncontrado)) {
@@ -226,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (favoritosDelTipo.length >= 4) {
                 alert(`Ya has seleccionado 4 favoritos de tipo ${tipo}.`);
             } else if (favoritoExiste(itemEncontrado)) {
-                alert('Este elemento ya está en tus favoritos.');
+                alert('Este elemento ya está en tus favoritos');
             }
         } else if (event.target.classList.contains('agregar-ver-despues')) {
             const itemId = event.target.dataset.id;
@@ -243,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 guardarParaVerDespues();
                 mostrarParaVerDespues(document.querySelector('.filtros-ver-despues button.activo')?.dataset.filtro || 'all');
             } else if (enListaParaVer(itemEncontrado)) {
-                alert('Este elemento ya está en tu lista de "Para ver después".');
+                alert('Este elemento ya está en tu Watchlist');
             }
         }
     });
