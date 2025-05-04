@@ -214,14 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const itemEncontrado = { id: itemId, tipo: tipo, imagen: imagen, titulo: titulo, detalleAdicional: artista, año: año };
 
-            const favoritosDelTipo = favoritos.filter(fav => fav.tipo === tipo);
-
-            if (favoritosDelTipo.length < 4 && !favoritoExiste(itemEncontrado)) {
+            if (!favoritoExiste(itemEncontrado)) { // Límite de favoritos eliminado
                 favoritos.push(itemEncontrado);
                 guardarFavoritos();
                 mostrarFavoritos(document.querySelector('.filtros-favoritos button.activo')?.dataset.filtro || 'all');
-            } else if (favoritosDelTipo.length >= 4) {
-                alert(`Ya has seleccionado 4 favoritos de tipo ${tipo}.`);
             } else if (favoritoExiste(itemEncontrado)) {
                 alert('Este elemento ya está en tus favoritos');
             }
