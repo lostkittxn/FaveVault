@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="item-detalle">${año}</p>
                     <div class="acciones-item">
                         <button class="agregar-favorito" data-id="${item.trackId || item.collectionId}" data-tipo="${tipoSeleccionado}" data-titulo="${titulo}" data-artista="${artista}" data-año="${año}" data-imagen="${imagen}">Favorito</button>
-                        <button class="agregar-ver-despues" data-id="${item.trackId || item.collectionId}" data-tipo="${tipoSeleccionado}" data-titulo="${titulo}" data-artista="${artista}" data-año="${año}" data-imagen="${imagen}">Watchlist</button>
+                        <button class="agregar-ver-despues" data-id="${item.trackId || item.collectionId}" data-tipo="${tipoSeleccionado}" data-titulo="${titulo}" data-artista="${artista}" data-año="${año}" data-imagen="${imagen}">Wishlist</button>
                     </div>
                 `;
                     listaResultadosDiv.appendChild(resultadoItem);
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 guardarParaVerDespues();
                 mostrarParaVerDespues(document.querySelector('.filtros-ver-despues button.activo')?.dataset.filtro || 'all');
             } else if (enListaParaVer(itemEncontrado)) {
-                alert('Este elemento ya está en tu Watchlist');
+                alert('Este elemento ya está en tu Wishlist');
             }
         }
     });
