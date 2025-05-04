@@ -14,8 +14,6 @@ body {
     background-image: url("bg.png");
     background-repeat: repeat;
     color: #333;
-    padding-top: constant(safe-area-inset-top);
-    padding-top: env(safe-area-inset-top);
     line-height: 1.5;
 }
 
@@ -817,3 +815,20 @@ header {
     margin-left: 5px;
    
 }
+
+.fake-status-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: constant(safe-area-inset-top); /* Para iOS < 11.0 */
+    height: env(safe-area-inset-top); /* Para iOS >= 11.0 */
+    background-color: black;
+    z-index: 1000; /* Asegúrate de que esté por encima de todo */
+  }
+
+  .content {
+    padding-top: constant(safe-area-inset-top); /* Ajusta según la altura de la barra */
+    padding-top: env(safe-area-inset-top); /* Ajusta según la altura de la barra */
+    /* Otros estilos de tu contenido */
+  }
