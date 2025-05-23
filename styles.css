@@ -39,8 +39,8 @@ header {
 }
 
 .logo-header img {
-    max-height: 35px; /* Ajusta la altura máxima de tu logo */
-    vertical-align: middle; /* Alinea verticalmente la imagen con el texto (si lo hubiera) */
+    max-height: 35px;
+    vertical-align: middle;
 }
 
 h2{
